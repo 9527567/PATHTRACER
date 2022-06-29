@@ -1,16 +1,17 @@
-#ifndef RAYTRACER_MATH_UTILS_H
+ï»¿#ifndef RAYTRACER_MATH_UTILS_H
 #define RAYTRACER_MATH_UTILS_H
 
 #include <cmath>
 #include<limits>
-#include<corecrt_math_defines.h>
+//#include<corecrt_math_defines.h>
 namespace scg
 {
 
+# define M_PI		3.14159265358979323846
 const float EPS = 1e-6;
-//const float EPS = std::numeric_limits<float>::epsilon();//¸¡µãÊı±íÊ¾µÄ×îĞ¡Öµ
-const float RAY_EPS = 1e-3;//¹âÏß×îĞ¡Öµ
-const float INF = std::numeric_limits<float>::infinity();//ÎŞÏŞ
+//const float EPS = std::numeric_limits<float>::epsilon();//æµ®ç‚¹æ•°è¡¨ç¤ºçš„æœ€å°å€¼
+const float RAY_EPS = 1e-3;//å…‰çº¿æœ€å°å€¼
+const float INF = std::numeric_limits<float>::infinity();//æ— é™
 
 
 inline float lerp(float value1, float value2, float weight)

@@ -1,4 +1,4 @@
-#include "raytrace.h"
+ï»¿#include "raytrace.h"
 
 #include "ray.h"
 #include "raycast.h"
@@ -52,7 +52,7 @@ bool getClosestIntersection(
         }
         volumeRay.origin -= scene.volumePos;
 
-		//ÈıÖÖ²»Í¬µÄäÖÈ¾ÀàĞÍ£¬¾ùÎªwoodcock¹âÏßÍ¶Éä
+		//ä¸‰ç§ä¸åŒçš„æ¸²æŸ“ç±»å‹ï¼Œå‡ä¸ºwoodcockå…‰çº¿æŠ•å°„
         if ((settings.renderType == 0 && castRayWoodcock(*scene.volume, volumeRay, intersection, settings, sampler)) ||
             (settings.renderType == 1 && castRayWoodcockFast(*scene.volume, volumeRay, intersection, settings, sampler)) ||
             (settings.renderType == 2 && castRayWoodcockFast2(*scene.volume, volumeRay, intersection, settings, sampler)))

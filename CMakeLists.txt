@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.10)
+﻿cmake_minimum_required(VERSION 3.10)
 #设置项目名称
 project(raytracer VERSION 0.1)
 #添加子模块pybind11
@@ -19,10 +19,17 @@ include_directories(${SDL2_INCLUDE_DIRS})
 include_directories(include/tinytiff)
 include_directories(include)
 find_package(OpenMP REQUIRED)
-aux_source_directory(Source SOURCE)
+
 pybind11_add_module(raytracer
         include/tinytiff/tinytiffreader.cpp
-        ${SOURCE}
+        Source/boundingbox.cpp
+        Source/main.cpp
+        Source/octree.cpp
+        Source/raycast.cpp
+        Source/raytrace.cpp
+        Source/triangle.cpp
+        Source/utils.cpp
+        Source/volume.cpp
         )
 target_link_libraries(raytracer PRIVATE
 		${SDL2_LIBRARIES}
